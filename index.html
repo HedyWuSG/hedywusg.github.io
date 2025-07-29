@@ -12,60 +12,70 @@
       padding: 0;
       line-height: 1.6;
       background-color: #f4f4f4;
+      color: #333;
     }
     header {
       background-color: #333;
-      color: white;
+      color: #fff;
       padding: 20px 0;
       text-align: center;
     }
     nav a {
-      color: white;
+      color: #fff;
       margin: 0 15px;
       text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      background-color: #fff;
     }
     section {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-      background-color: white;
-      margin-top: 20px;
-      border-radius: 8px;
+      margin-bottom: 50px;
     }
     h1, h2 {
-      color: #333;
+      color: #222;
     }
-    form {
-      display: flex;
-      flex-direction: column;
+    ul {
+      padding-left: 20px;
     }
-    label {
-      margin-top: 10px;
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9em;
     }
-    input, textarea {
+    .profile-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      display: block;
+      margin: 20px auto;
+    }
+    input, textarea, button {
+      display: block;
+      width: 100%;
       padding: 10px;
-      margin-top: 5px;
+      margin-top: 10px;
+      font-size: 1em;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
     button {
-      margin-top: 15px;
-      padding: 10px;
       background-color: #333;
-      color: white;
+      color: #fff;
       border: none;
-      border-radius: 4px;
       cursor: pointer;
     }
     button:hover {
       background-color: #555;
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #333;
-      color: white;
-      margin-top: 20px;
     }
   </style>
 </head>
@@ -80,45 +90,41 @@
     </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I’m Yonghui Wu, a computational biologist and AI researcher passionate about genomics and personalized medicine. With over 20 years of experience, I aim to bridge biological insight with machine learning to improve healthcare.</p>
-  </section>
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="profile_photo_web.jpg" alt="Profile Photo" class="profile-photo" />
+      <p>Hello! I'm Yonghui Wu, a computational biologist and AI expert based in Singapore. I specialize in genomics, machine learning, and biomedical data science.</p>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Polygenic Risk Scoring Platform</strong> – Built a tool integrating GWAS and AI to predict disease risk.</li>
-      <li><strong>Genomic Foundation Model</strong> – Developed BERT-style and GPT-style deep learning models for genomics data.</li>
-    </ul>
-  </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Polygenic Risk Score Model:</strong> Developed a PRS model using GWAS summary statistics and imputed data.</li>
+        <li><strong>AI-Powered Diagnosis Assistant:</strong> Built an NLP-based pipeline for clinical notes interpretation.</li>
+        <li><strong>Genome Browser Plugin:</strong> Created a JavaScript visualization tool for genome annotation.</li>
+      </ul>
+    </section>
 
-  <section id="resume">
-    <h2>Resume</h2>
-    <p>You can <a href="Yonghui_Wu_Resume.pdf" target="_blank">download my resume here</a>.</p>
-  </section>
+    <section id="resume">
+      <h2>Resume</h2>
+      <p>Download my CV <a href="resume.pdf" target="_blank">here</a>.</p>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form action="https://formsubmit.co/hedy_wu@hotmail.com" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" name="name" id="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" name="email" id="email" required>
-
-      <label for="message">Message:</label>
-      <textarea name="message" id="message" rows="5" required></textarea>
-
-      <input type="hidden" name="_next" value="https://hedywusg.github.io/thank-you.html">
-      <input type="hidden" name="_captcha" value="false">
-
-      <button type="submit">Send</button>
-    </form>
-  </section>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="https://formsubmit.co/hedy_wu@hotmail.com" method="POST">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" placeholder="Your message" rows="5" required></textarea>
+        <input type="hidden" name="_next" value="https://hedywusg.github.io/thank-you.html">
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Yonghui Wu. All rights reserved.</p>
+    <p>© 2025 Yonghui Wu</p>
   </footer>
 </body>
 </html>
