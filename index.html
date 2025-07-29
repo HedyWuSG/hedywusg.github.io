@@ -1,77 +1,139 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yonghui Wu | Bioinformatics & AI Expert</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yonghui Wu | Bioinformatics & AI Portfolio">
+  <title>Yonghui Wu | Bioinformatics & AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      background-color: #f8f9fa;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
       color: #333;
     }
-    h1, h2 {
-      color: #2c3e50;
-    }
-    img {
-      max-width: 150px;
-      border-radius: 50%;
+    header {
+      background: #004466;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
     }
     nav a {
-      margin: 0 10px;
+      margin: 0 15px;
+      color: white;
       text-decoration: none;
-      color: #007bff;
     }
-    section {
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 20px;
+    }
+    .profile-pic {
+      width: 160px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
       margin-top: 40px;
     }
+    .project {
+      background: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 15px;
+      background: #004466;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background: #004466;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
     footer {
-      margin-top: 50px;
+      text-align: center;
+      padding: 20px;
       font-size: 0.9em;
-      color: #666;
+      background: #eee;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Yonghui Wu</h1>
-    <p>Bioinformatics & AI Expert | PhD | Genomic Data, Python & R</p>
-    <img src="profile_photo_web.jpg" alt="Profile Photo" />
+    <p>Bioinformatics Scientist | AI Researcher | Genomics Expert</p>
     <nav>
-      <a href="#about">About</a>
+      <a href="#about">About Me</a>
       <a href="#projects">Projects</a>
       <a href="#resume">Resume</a>
-      <a href="mailto:hedy_wu@hotmail.com">Contact</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a PhD in Mechanical Engineering with over 15 years of experience in scientific computing, bioinformatics, and artificial intelligence. My expertise lies in integrating omics data, developing genomic analysis pipelines, and applying machine learning to solve complex biomedical problems.</p>
-  </section>
+  <div class="container">
+    <section id="about">
+      <img src="profile_photo_web.jpg" alt="Yonghui Wu" class="profile-pic">
+      <h2>About Me</h2>
+      <p>
+        I am a bioinformatician and AI expert with over 20 years of experience in genomics, machine learning, and translational medicine. I have developed pipelines for GWAS, PRS, and real-world applications in cancer genomics and personalized healthcare.
+      </p>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Polygenic Risk Score Tool</strong>: Built a cross-population PRS system using Python and R for glaucoma risk prediction.</li>
-      <li><strong>AI Drug Discovery Platform</strong>: Developed algorithms for drug target discovery using gene expression and pathway data.</li>
-      <li><strong>Genome Browser Plugin</strong>: Created a visualization module for patient-level variant annotation.</li>
-    </ul>
-  </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Polygenic Risk Score Platform</h3>
+        <p>Built a full-stack PRS computation pipeline integrating PLINK, Hail, and scikit-learn.</p>
+        <a href="https://github.com/hedywusg/PRS-pipeline" class="button">View on GitHub</a>
+      </div>
+      <div class="project">
+        <h3>Glaucoma Risk Prediction (PACG)</h3>
+        <p>Performed multi-ethnic GWAS and PCA using Hail to predict glaucoma risk across populations.</p>
+        <a href="https://github.com/hedywusg/glaucoma-pacg" class="button">View on GitHub</a>
+      </div>
+    </section>
 
-  <section id="resume">
-    <h2>Resume</h2>
-    <p>You can <a href="resume_YonghuiWu.pdf" target="_blank">download my CV here</a>.</p>
-  </section>
+    <section id="resume">
+      <h2>Resume</h2>
+      <p>You can download my resume below:</p>
+      <a href="resume.pdf" class="button" download>📎 Download My Resume</a>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </div>
 
   <footer>
-    <p>© 2025 Yonghui Wu | Contact: hedy_wu@hotmail.com</p>
+    &copy; 2025 Yonghui Wu | <a href="https://github.com/hedywusg" target="_blank">GitHub</a> | All rights reserved.
   </footer>
-
 </body>
 </html>
